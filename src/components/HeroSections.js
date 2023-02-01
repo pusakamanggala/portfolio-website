@@ -8,7 +8,7 @@ const HeroSections = () => {
   const { dark } = React.useContext(ThemeContext);
   return (
     <div className={`flex justify-center items-center ${dark && "dark"}`}>
-      <div className=" flex-row justify-center items-center w-full pt-60 pb-28  bg-teal-500 dark:bg-slate-900">
+      <div className=" flex-row justify-center items-center w-full md:pt-60 pb-28 pt-32 bg-teal-500 dark:bg-slate-900">
         <h1 className="text-4xl text-white font-poppins mb-0 p-4">
           Hi, I'm{" "}
           <span className="text-slate-900 dark:text-teal-300">
