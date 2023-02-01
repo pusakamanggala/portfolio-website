@@ -5,8 +5,8 @@ import gmail from "../icons/gmail.png";
 
 const HeroSections = () => {
   return (
-    <div className=" flex justify-center items-center ">
-      <div className=" flex-row justify-center items-center w-full py-64">
+    <div className=" flex justify-center items-center">
+      <div className=" flex-row justify-center items-center w-full pt-60 pb-28 ">
         <h1 className="text-4xl text-white font-poppins mb-0 p-4">
           Hi, I'm <span className="text-slate-900 ">Pusaka Manggala</span>
           <br /> A Front End Web Developer
