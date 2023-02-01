@@ -1,18 +1,26 @@
 import { useState } from "react";
 import LightModeIcon from "../icons/lightMode.png";
 import { Link } from "react-scroll";
+import { ThemeContext } from "../context/ThemeContext";
+import { useContext } from "react";
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
+  const { dark, ThemeToggle } = useContext(ThemeContext);
 
   return (
-    <nav className="w-full backdrop-blur-md bg-teal/5 fixed z-10">
+    <nav
+      className={`w-full backdrop-blur-sm bg-teal/5 fixed z-10 ${
+        dark && "dark"
+      }`}
+    >
       <div className="justify-between px-4 mx-auto lg:max-w-10xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="javascript:void(0)">
-              <h1 className="text-3xl text-slate-900 font-poppins">Pusaka.</h1>
-            </a>
+            <h1 className="text-3xl text-slate-900 font-poppins dark:text-teal-300">
+              Pusaka.
+            </h1>
+
             <div className="md:hidden">
               <button
                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -60,7 +68,7 @@ export default function NavBar() {
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li>
                 <Link
-                  activeClass="text-black"
+                  activeClass="text-black dark:text-teal-300"
                   smooth={true}
                   spy={true}
                   to="HeroSection"
@@ -76,7 +84,7 @@ export default function NavBar() {
               </li>
               <li>
                 <Link
-                  activeClass="text-black"
+                  activeClass="text-black dark:text-teal-300"
                   smooth={true}
                   spy={true}
                   to="Project"
@@ -91,7 +99,12 @@ export default function NavBar() {
                 </h1>
               </li>
               <li>
-                <img className="h-7" src={LightModeIcon} alt="" />
+                <img
+                  className="h-7 cursor-pointer"
+                  src={LightModeIcon}
+                  alt=""
+                  onClick={() => ThemeToggle()}
+                />
               </li>
             </ul>
           </div>
