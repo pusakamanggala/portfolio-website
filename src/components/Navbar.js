@@ -11,7 +11,7 @@ export default function NavBar() {
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="javascript:void(0)">
-              <h1 className="text-2xl text-slate-900 font-poppins">Pusaka.</h1>
+              <h1 className="text-3xl text-slate-900 font-poppins">Pusaka.</h1>
             </a>
             <div className="md:hidden">
               <button
