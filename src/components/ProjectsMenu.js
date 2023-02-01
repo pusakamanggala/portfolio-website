@@ -12,7 +12,7 @@ const ProjectsMenu = () => {
           Projects
         </h1>
         <div className="flex py-20 justify-center ">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 lg:max-w-4xl w-full">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:max-w-4xl w-full">
             <div className="w-72 h-96 bg-slate-400 rounded-2xl mx-auto relative overflow-hidden">
               {/* <div className="w-full h-full bg-black absolute opacity-0 hover:opacity-90 p-6">
               <h1 className="text-white">
