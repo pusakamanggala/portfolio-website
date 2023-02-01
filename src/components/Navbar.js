@@ -3,6 +3,7 @@ import LightModeIcon from "../icons/lightMode.png";
 import { Link } from "react-scroll";
 import { ThemeContext } from "../context/ThemeContext";
 import { useContext } from "react";
+import DarkModeIcon from "../icons/darkMode.png";
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -100,8 +101,8 @@ export default function NavBar() {
               </li>
               <li>
                 <img
-                  className="h-7 cursor-pointer"
-                  src={LightModeIcon}
+                  className="h-9 cursor-pointer animate-bounce"
+                  src={dark ? LightModeIcon : DarkModeIcon}
                   alt=""
                   onClick={() => ThemeToggle()}
                 />
