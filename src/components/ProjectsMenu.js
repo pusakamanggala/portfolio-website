@@ -4,7 +4,7 @@ import Workspot from "../img/Workspot.jpg";
 
 const ProjectsMenu = () => {
   return (
-    <div className="pt-32">
+    <div className="pt-40">
       <h1 className="text-4xl text-slate-900 font-poppins mb-0">Projects</h1>
       <div className="flex py-20 justify-center ">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 lg:max-w-4xl w-full">
@@ -26,10 +26,10 @@ const ProjectsMenu = () => {
             </h1>
             <img src={Workspot} alt="" />
           </div>
-          <div className="w-72 h-96 bg-black rounded-2xl mx-auto"> </div>
-          <div className="w-72 h-96 bg-black rounded-2xl mx-auto"> </div>
-          <div className="w-72 h-96 bg-black rounded-2xl mx-auto"> </div>
-          <div className="w-72 h-96 bg-black rounded-2xl mx-auto"> </div>
+          <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto"> </div>
+          <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto"> </div>
+          <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto"> </div>
+          <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto"> </div>
         </div>
       </div>
     </div>
