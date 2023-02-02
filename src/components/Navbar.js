@@ -79,11 +79,6 @@ export default function NavBar() {
                 </Link>
               </li>
               <li>
-                <h1 className="text-2xl font-poppins text-white hover:text-3xl">
-                  About
-                </h1>
-              </li>
-              <li>
                 <Link
                   activeClass="text-black dark:text-teal-300"
                   smooth={true}
@@ -92,6 +87,17 @@ export default function NavBar() {
                   className="text-2xl font-poppins text-white cursor-pointer hover:text-3xl"
                 >
                   Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  activeClass="text-black dark:text-teal-300"
+                  smooth={true}
+                  spy={true}
+                  to="Skills"
+                  className="text-2xl font-poppins text-white cursor-pointer hover:text-3xl"
+                >
+                  Skills
                 </Link>
               </li>
               <li className=" cursor-pointer ">

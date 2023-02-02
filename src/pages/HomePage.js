@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import HeroSections from "../components/HeroSections";
 import ProjectsMenu from "../components/ProjectsMenu";
 import { ThemeProvider } from "../context/ThemeContext";
+import SkillsList from "../components/SkillsList";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,9 @@ const HomePage = () => {
 
         <section id="Project">
           <ProjectsMenu />
+        </section>
+        <section id="Skills">
+          <SkillsList />
         </section>
       </div>
     </ThemeProvider>
