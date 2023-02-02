@@ -41,6 +41,7 @@ const SkillsList = () => {
           {skillsIcons(dark ? figmaBlack : figma)}
         </div>
         <img className="lg:h-72 h-40 mx-auto lg:mt-56" src={footerImg} alt="" />
+        <div className="w-full h-3 bg-white"></div>
       </div>
     </div>
   );
