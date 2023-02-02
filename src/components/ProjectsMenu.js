@@ -31,18 +31,10 @@ const ProjectsMenu = () => {
               </h1>
               <img src={Workspot} alt="" />
             </div>
-            <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto shadow-md shadow-teal-900 dark:shadow-teal-400">
-              {" "}
-            </div>
-            <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto shadow-md shadow-teal-900 dark:shadow-teal-400">
-              {" "}
-            </div>
-            <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto shadow-md shadow-teal-900 dark:shadow-teal-400">
-              {" "}
-            </div>
-            <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto shadow-md shadow-teal-900 dark:shadow-teal-400">
-              {" "}
-            </div>
+            <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto shadow-md shadow-teal-900 dark:shadow-teal-400"></div>
+            <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto shadow-md shadow-teal-900 dark:shadow-teal-400"></div>
+            <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto shadow-md shadow-teal-900 dark:shadow-teal-400"></div>
+            <div className="w-72 h-96 bg-teal-100 rounded-2xl mx-auto shadow-md shadow-teal-900 dark:shadow-teal-400"></div>
           </div>
         </div>
       </div>
