@@ -5,6 +5,8 @@ import gmail from "../icons/gmail.png";
 import linkedinBlack from "../icons/linkedinBlack.png";
 import githubBlack from "../icons/githubBlack.png";
 import gmailBlack from "../icons/gmailBlack.png";
+import WA from "../icons/WA.png";
+import WABlack from "../icons/WABlack.png";
 import { ThemeContext } from "../context/ThemeContext";
 
 const HeroSections = () => {
@@ -46,6 +48,12 @@ const HeroSections = () => {
             className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
           >
             <img className="h-10" src={dark ? gmailBlack : gmail} alt="" />
+          </a>
+          <a
+            href="https://wa.me/+6282126172854"
+            className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
+          >
+            <img className="h-11" src={dark ? WABlack : WA} alt="" />
           </a>
         </div>
       </div>
