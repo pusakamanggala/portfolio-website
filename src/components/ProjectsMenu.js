@@ -7,8 +7,8 @@ const ProjectsMenu = () => {
   const { dark } = React.useContext(ThemeContext);
   return (
     <div className={`${dark && "dark"}`}>
-      <div className="pt-40 bg-teal-500 dark:bg-slate-900 transition-all duration-700">
-        <h1 className="text-4xl text-slate-900 font-poppins mb-0 dark:text-white">
+      <div className="pt-28 bg-teal-500 dark:bg-slate-900 transition-all duration-700">
+        <h1 className="text-2xl md:text-4xl text-slate-900 font-poppins mb-0 dark:text-white">
           Projects
         </h1>
         <div className="flex py-20 justify-center ">

@@ -28,7 +28,7 @@ const SkillsList = () => {
   return (
     <div className={`${dark && "dark"}`}>
       <div className="pt-40 bg-teal-500 dark:bg-slate-900 transition-all duration-700 ">
-        <h1 className="text-4xl text-slate-900 font-poppins mb-0 dark:text-white">
+        <h1 className="text-2xl md:text-4xl text-slate-900 font-poppins mb-0 dark:text-white">
           Skills and Tools
         </h1>
         <div className="grid grid-cols-3 lg:grid-cols-7 gap-8 md:w=full lg:w-5/12 mx-auto py-36">

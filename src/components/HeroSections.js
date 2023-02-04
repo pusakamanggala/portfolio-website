@@ -13,56 +13,58 @@ const HeroSections = () => {
   const { dark } = React.useContext(ThemeContext);
   return (
     <div className={`flex justify-center items-center ${dark && "dark"} `}>
-      <div className=" flex-row justify-center items-center w-full md:pt-60 pb-28 pt-44 bg-teal-500 dark:bg-slate-900 transition-all duration-700">
-        <h1 className="text-4xl text-white font-poppins mb-0 p-4">
-          Hi, I'm{" "}
-          <span className="text-slate-900 dark:text-teal-300">
-            Pusaka Manggala
-          </span>
-          <br /> A Front End Web Developer
-        </h1>
-        <h1 className="text-base font-poppins text-white mx-auto lg:w-2/4">
-          I'm a front-end web developer from Indonesia, specializing in building
-          beautiful website user interfaces using React.Js and css framework
-          like Bootstrap and Tailwind.
-        </h1>
-        <div className="flex justify-center h-60 items-center ">
-          <a
-            href="https://www.linkedin.com/in/pusakamanggala/"
-            target="_blank"
-            rel="noreferrer"
-            className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md "
-          >
-            <img
-              className="h-10 "
-              src={dark ? linkedinBlack : linkedin}
-              alt=""
-            />
-          </a>
-          <a
-            href="https://github.com/pusakamanggala"
-            target="_blank"
-            rel="noreferrer"
-            className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
-          >
-            <img className="h-10" src={dark ? githubBlack : github} alt="" />
-          </a>
-          <a
-            href="mailto:pusakamanggala@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-            className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
-          >
-            <img className="h-10" src={dark ? gmailBlack : gmail} alt="" />
-          </a>
-          <a
-            href="https://wa.me/+6282126172854"
-            target="_blank"
-            rel="noreferrer"
-            className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
-          >
-            <img className="h-11" src={dark ? WABlack : WA} alt="" />
-          </a>
+      <div className="w-full h-screen flex justify-center items-center bg-teal-500 dark:bg-slate-900 transition-all duration-700">
+        <div className=" flex-row justify-center  items-center w-full">
+          <h1 className="text-xl md:text-4xl text-white font-poppins p-4">
+            Hi, I'm{" "}
+            <span className="text-slate-900 dark:text-teal-300">
+              Pusaka Manggala
+            </span>
+            <br /> A Front End Web Developer
+          </h1>
+          <h1 className="md:text-xl text-xs font-poppins text-white mx-auto lg:w-2/4">
+            I'm a front-end web developer from Indonesia, specializing in
+            building beautiful website user interfaces using React.Js and css
+            framework like Bootstrap and Tailwind.
+          </h1>
+          <div className="flex justify-center h-60 items-center ">
+            <a
+              href="https://www.linkedin.com/in/pusakamanggala/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md "
+            >
+              <img
+                className="h-10 "
+                src={dark ? linkedinBlack : linkedin}
+                alt=""
+              />
+            </a>
+            <a
+              href="https://github.com/pusakamanggala"
+              target="_blank"
+              rel="noreferrer"
+              className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
+            >
+              <img className="h-10" src={dark ? githubBlack : github} alt="" />
+            </a>
+            <a
+              href="mailto:pusakamanggala@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
+            >
+              <img className="h-10" src={dark ? gmailBlack : gmail} alt="" />
+            </a>
+            <a
+              href="https://wa.me/+6282126172854"
+              target="_blank"
+              rel="noreferrer"
+              className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
+            >
+              <img className="h-11" src={dark ? WABlack : WA} alt="" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
