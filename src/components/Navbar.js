@@ -104,6 +104,7 @@ export default function NavBar() {
               <li className=" cursor-pointer ">
                 <a
                   href={Resume}
+                  target="_blank"
                   className="text-2xl font-poppins text-white hover:text-3xl"
                 >
                   Resume
