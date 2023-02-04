@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { ThemeContext } from "../context/ThemeContext";
 import { useContext } from "react";
 import DarkModeIcon from "../icons/darkMode.png";
+import Resume from "../resume/Resume.pdf";
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -101,9 +102,12 @@ export default function NavBar() {
                 </Link>
               </li>
               <li className=" cursor-pointer ">
-                <h1 className="text-2xl font-poppins text-white hover:text-3xl">
+                <a
+                  href={Resume}
+                  className="text-2xl font-poppins text-white hover:text-3xl"
+                >
                   Resume
-                </h1>
+                </a>
               </li>
               <li>
                 <img
