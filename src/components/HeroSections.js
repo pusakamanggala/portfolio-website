@@ -30,6 +30,7 @@ const HeroSections = () => {
           <a
             href="https://www.linkedin.com/in/pusakamanggala/"
             target="_blank"
+            rel="noreferrer"
             className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md "
           >
             <img
@@ -41,6 +42,7 @@ const HeroSections = () => {
           <a
             href="https://github.com/pusakamanggala"
             target="_blank"
+            rel="noreferrer"
             className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
           >
             <img className="h-10" src={dark ? githubBlack : github} alt="" />
@@ -48,6 +50,7 @@ const HeroSections = () => {
           <a
             href="mailto:pusakamanggala@gmail.com"
             target="_blank"
+            rel="noreferrer"
             className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
           >
             <img className="h-10" src={dark ? gmailBlack : gmail} alt="" />
@@ -55,6 +58,7 @@ const HeroSections = () => {
           <a
             href="https://wa.me/+6282126172854"
             target="_blank"
+            rel="noreferrer"
             className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
           >
             <img className="h-11" src={dark ? WABlack : WA} alt="" />
