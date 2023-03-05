@@ -7,7 +7,7 @@ const ProjectsMenu = () => {
   const { dark } = React.useContext(ThemeContext);
   return (
     <div className={`${dark && "dark"}`}>
-      <div className="pt-28 bg-teal-500 dark:bg-slate-900 transition-all duration-700">
+      <div className="md:pt-24 pt-16 bg-teal-500 dark:bg-slate-900 transition-all duration-700">
         <h1 className="text-2xl md:text-4xl text-slate-900 font-poppins mb-0 dark:text-white">
           Projects
         </h1>

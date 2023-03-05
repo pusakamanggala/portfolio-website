@@ -31,7 +31,7 @@ const SkillsList = () => {
         <h1 className="text-2xl md:text-4xl text-slate-900 font-poppins mb-0 dark:text-white">
           Skills and Tools
         </h1>
-        <div className="grid grid-cols-3 lg:grid-cols-7 gap-8 md:w=full lg:w-5/12 mx-auto py-36">
+        <div className="grid grid-cols-3 lg:grid-cols-7 gap-8 px-4 md:w=full lg:w-6/12 mx-auto py-36">
           {skillsIcons(dark ? htmlBlack : html)}
           {skillsIcons(dark ? jsBlack : js)}
           {skillsIcons(dark ? reactBlack : react)}

@@ -23,19 +23,19 @@ const HeroSections = () => {
             <br /> A Front End Web Developer
           </h1>
           <h1 className="md:text-xl text-xs font-poppins text-white mx-auto lg:w-2/4">
-            I'm a front-end web developer from Indonesia, specializing in
-            building beautiful website user interfaces using React.Js and css
-            framework like Bootstrap and Tailwind.
+            I'm a front-end web developer from Indonesia, love to build a
+            beautiful and fun website using React.Js and CSS framework like
+            Bootstrap and Tailwind.
           </h1>
-          <div className="flex justify-center h-60 items-center ">
+          <div className="flex justify-center md:h-60 h-28 items-center ">
             <a
               href="https://www.linkedin.com/in/pusakamanggala/"
               target="_blank"
               rel="noreferrer"
-              className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md "
+              className="flex m-3 h-14 w-14 md:h-20 md:w-20  rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md "
             >
               <img
-                className="h-10 "
+                className="md:h-10 h-8 "
                 src={dark ? linkedinBlack : linkedin}
                 alt=""
               />
@@ -44,25 +44,33 @@ const HeroSections = () => {
               href="https://github.com/pusakamanggala"
               target="_blank"
               rel="noreferrer"
-              className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
+              className="flex m-3 h-14 w-14 md:h-20 md:w-20  rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
             >
-              <img className="h-10" src={dark ? githubBlack : github} alt="" />
+              <img
+                className="md:h-10 h-8"
+                src={dark ? githubBlack : github}
+                alt=""
+              />
             </a>
             <a
               href="mailto:pusakamanggala@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
+              className="flex m-3 h-14 w-14 md:h-20 md:w-20  rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
             >
-              <img className="h-10" src={dark ? gmailBlack : gmail} alt="" />
+              <img
+                className="md:h-10 h-8"
+                src={dark ? gmailBlack : gmail}
+                alt=""
+              />
             </a>
             <a
               href="https://wa.me/+6282126172854"
               target="_blank"
               rel="noreferrer"
-              className="flex m-3 h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
+              className="flex m-3 h-14 w-14 md:h-20 md:w-20  rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md"
             >
-              <img className="h-11" src={dark ? WABlack : WA} alt="" />
+              <img className="md:h-11 h-8" src={dark ? WABlack : WA} alt="" />
             </a>
           </div>
         </div>
