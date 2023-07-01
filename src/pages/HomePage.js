@@ -14,7 +14,7 @@ const HomePage = () => {
   const { dark } = useContext(ThemeContext);
 
   const isMobile = window.innerWidth <= 768;
-  const mobileTimeoutAddition = isMobile ? 1400 : 0;
+  const mobileTimeoutAddition = isMobile ? 100 : 0;
 
   useEffect(() => {
     setTimeout(() => {
