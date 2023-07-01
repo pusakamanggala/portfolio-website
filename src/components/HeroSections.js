@@ -16,19 +16,22 @@ const HeroSections = () => {
   const [showSpecialization, setShowSpecialization] = useState(false);
   const [showDescription, setShowDescription] = useState(false);
   const [showIcons, setShowIcons] = useState(false);
+  // check mobile screen
+  const isMobile = window.innerWidth <= 768;
+  const mobileTimeoutAddition = isMobile ? 1000 : 0;
 
   useEffect(() => {
     setTimeout(() => {
       setShowSpecialization(true);
-    }, 1500);
+    }, 1300 + mobileTimeoutAddition);
     setTimeout(() => {
       setShowDescription(true);
-    }, 2500);
+    }, 2000 + mobileTimeoutAddition);
 
     setTimeout(() => {
       setShowIcons(true);
-    }, 3500);
-  }, []);
+    }, 2600 + mobileTimeoutAddition);
+  }, [mobileTimeoutAddition]);
 
   const getAnimationConfig = () => {
     return {
@@ -56,7 +59,7 @@ const HeroSections = () => {
   return (
     <div className={`flex justify-center items-center ${dark && "dark"}`}>
       <div className="w-full h-screen flex justify-center items-center bg-teal-500 dark:bg-slate-900 transition-all duration-700">
-        <div className="flex-row justify-center items-center w-full">
+        <div className="flex-row justify-center items-center w-full p-5 md:p-0">
           <div className="typewriter transition-opacity duration-500">
             <h1 className="text-xl md:text-4xl text-white font-poppins max-w-fit pb-1">
               Hi, I'm{" "}

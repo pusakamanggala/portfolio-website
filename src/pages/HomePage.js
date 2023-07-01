@@ -13,11 +13,14 @@ const HomePage = () => {
   const scaleY = useSpring(scrollYProgress);
   const { dark } = useContext(ThemeContext);
 
+  const isMobile = window.innerWidth <= 768;
+  const mobileTimeoutAddition = isMobile ? 1000 : 0;
+
   useEffect(() => {
     setTimeout(() => {
       setShowNavBar(true);
       setShowContent(true);
-    }, 6000);
+    }, 4700 + mobileTimeoutAddition);
   }, []);
 
   return (
