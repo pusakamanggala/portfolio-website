@@ -14,14 +14,14 @@ const HomePage = () => {
   const { dark } = useContext(ThemeContext);
 
   const isMobile = window.innerWidth <= 768;
-  const mobileTimeoutAddition = isMobile ? 1000 : 0;
+  const mobileTimeoutAddition = isMobile ? 1400 : 0;
 
   useEffect(() => {
     setTimeout(() => {
       setShowNavBar(true);
       setShowContent(true);
     }, 4700 + mobileTimeoutAddition);
-  }, []);
+  }, [mobileTimeoutAddition]);
 
   return (
     <div className={` ${dark ? "dark" : ""} App relative bg-teal-500"`}>

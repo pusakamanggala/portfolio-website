@@ -16,9 +16,9 @@ export default function NavBar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`w-full backdrop-blur-sm bg-teal/5 fixed z-10 ${
-        dark && "dark"
-      }`}
+      className={`w-full ${
+        navbar ? "h-screen md:h-auto" : ""
+      }  backdrop-blur-sm bg-teal/5 fixed z-10 ${dark && "dark"}`}
     >
       <div className="justify-between px-4 mx-auto lg:max-w-10xl md:items-center md:flex md:px-8">
         <div>
@@ -71,14 +71,14 @@ export default function NavBar() {
               navbar ? "block" : "hidden"
             }`}
           >
-            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <ul className="justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li>
                 <Link
                   activeClass="text-black dark:text-teal-300"
                   smooth={true}
                   spy={true}
                   to="HeroSection"
-                  className="text-2xl font-poppins text-white cursor-pointer hover:text-3xl"
+                  className="text-2xl font-poppins text-white cursor-pointer hover:text-3xl "
                 >
                   Home
                 </Link>
@@ -115,7 +115,7 @@ export default function NavBar() {
                   Resume
                 </a>
               </li>
-              <li>
+              <li className="md:static absolute right-5 bottom-5">
                 <img
                   className="h-9 cursor-pointer animate-bounce"
                   src={dark ? LightModeIcon : DarkModeIcon}

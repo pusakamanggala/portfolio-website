@@ -18,7 +18,7 @@ const HeroSections = () => {
   const [showIcons, setShowIcons] = useState(false);
   // check mobile screen
   const isMobile = window.innerWidth <= 768;
-  const mobileTimeoutAddition = isMobile ? 1000 : 0;
+  const mobileTimeoutAddition = isMobile ? 1500 : 0;
 
   useEffect(() => {
     setTimeout(() => {
