@@ -9,6 +9,7 @@ import WA from "../icons/WA.png";
 import WABlack from "../icons/WABlack.png";
 import { ThemeContext } from "../context/ThemeContext";
 import "../App.css";
+import { motion } from "framer-motion";
 
 const HeroSections = () => {
   const { dark } = React.useContext(ThemeContext);
@@ -19,15 +20,38 @@ const HeroSections = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowSpecialization(true);
-    }, 2000);
+    }, 1500);
     setTimeout(() => {
       setShowDescription(true);
-    }, 3000);
+    }, 2500);
 
     setTimeout(() => {
       setShowIcons(true);
-    }, 4000);
+    }, 3500);
   }, []);
+
+  const getAnimationConfig = () => {
+    return {
+      initial: { opacity: 0, y: 20 }, // Initial state (hidden and slightly moved down)
+      animate: { opacity: 1, y: 0 }, // Animation to play (visible and in original position)
+      transition: { duration: 0.5 }, // Animation duration
+    };
+  };
+
+  const getAnimationIconConfig = () => {
+    return {
+      initial: { scale: 0 },
+      animate: { rotate: 360, scale: 1 },
+      transition: {
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      },
+    };
+  };
+
+  const iconAnimationConfig = getAnimationIconConfig();
+  const animationConfig = getAnimationConfig();
 
   return (
     <div className={`flex justify-center items-center ${dark && "dark"}`}>
@@ -43,20 +67,42 @@ const HeroSections = () => {
           </div>
 
           {showSpecialization && (
-            <h2 className="text-xl md:text-4xl text-white font-poppins transition-opacity duration-500 mb-4">
+            <motion.h2
+              initial={animationConfig.initial}
+              animate={animationConfig.animate}
+              transition={animationConfig.transition}
+              className="text-xl md:text-4xl text-white font-poppins transition-opacity duration-500 mb-4"
+            >
               A Front End Web Developer
-            </h2>
+            </motion.h2>
           )}
           {showDescription && (
-            <h1 className="md:text-xl text-xs font-poppins text-white mx-auto lg:w-2/4 ">
+            <motion.h1
+              initial={animationConfig.initial}
+              animate={animationConfig.animate}
+              transition={animationConfig.transition}
+              className="md:text-xl text-xs font-poppins text-white mx-auto lg:w-2/4"
+            >
               I'm a front-end web developer from Indonesia, love to build a
               beautiful and fun website using React.Js and CSS framework like
               Bootstrap and Tailwind.
-            </h1>
+            </motion.h1>
           )}
           {showIcons && (
             <div className="flex justify-center md:h-40 h-28 items-end transition-opacity duration-500">
-              <a
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ rotate: 180, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                }}
+              />
+              <motion.a
+                initial={iconAnimationConfig.initial}
+                animate={iconAnimationConfig.animate}
+                transition={{ ...iconAnimationConfig.transition, delay: 0 }}
                 href="https://www.linkedin.com/in/pusakamanggala/"
                 target="_blank"
                 rel="noreferrer"
@@ -67,8 +113,11 @@ const HeroSections = () => {
                   src={dark ? linkedinBlack : linkedin}
                   alt=""
                 />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                initial={iconAnimationConfig.initial}
+                animate={iconAnimationConfig.animate}
+                transition={{ ...iconAnimationConfig.transition, delay: 0.5 }}
                 href="https://github.com/pusakamanggala"
                 target="_blank"
                 rel="noreferrer"
@@ -79,8 +128,11 @@ const HeroSections = () => {
                   src={dark ? githubBlack : github}
                   alt=""
                 />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                initial={iconAnimationConfig.initial}
+                animate={iconAnimationConfig.animate}
+                transition={{ ...iconAnimationConfig.transition, delay: 1 }}
                 href="mailto:pusakamanggala@gmail.com"
                 target="_blank"
                 rel="noreferrer"
@@ -91,15 +143,18 @@ const HeroSections = () => {
                   src={dark ? gmailBlack : gmail}
                   alt=""
                 />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                initial={iconAnimationConfig.initial}
+                animate={iconAnimationConfig.animate}
+                transition={{ ...iconAnimationConfig.transition, delay: 1.5 }}
                 href="https://wa.me/+6282126172854"
                 target="_blank"
                 rel="noreferrer"
                 className="flex m-3 h-14 w-14 md:h-20 md:w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md transition-opacity duration-500"
               >
                 <img className="md:h-11 h-8" src={dark ? WABlack : WA} alt="" />
-              </a>
+              </motion.a>
             </div>
           )}
         </div>

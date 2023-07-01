@@ -5,13 +5,17 @@ import { ThemeContext } from "../context/ThemeContext";
 import { useContext } from "react";
 import DarkModeIcon from "../icons/darkMode.png";
 import Resume from "../resume/Resume.pdf";
+import { motion } from "framer-motion";
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
   const { dark, ThemeToggle } = useContext(ThemeContext);
 
   return (
-    <nav
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
       className={`w-full backdrop-blur-sm bg-teal/5 fixed z-10 ${
         dark && "dark"
       }`}
@@ -123,6 +127,6 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

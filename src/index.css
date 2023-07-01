@@ -2,3 +2,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Hide the scroll bar for all elements */
+body::-webkit-scrollbar {
+  width: 0.5em; /* Adjust the width as needed */
+  height: 0.5em; /* Adjust the height as needed */
+}
+
+/* Hide the scroll bar for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide the scroll bar for Firefox */
+/* Note: This is not supported in Firefox version 64 and above */
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Hide the scroll bar for IE and Edge */
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
