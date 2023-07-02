@@ -21,13 +21,13 @@ const SkillsList = () => {
   const { dark } = useContext(ThemeContext);
 
   const skills = [
-    { icon: html, alt: "", altDark: htmlBlack, delay: 0 },
-    { icon: js, alt: "", altDark: jsBlack, delay: 0.5 },
-    { icon: react, alt: "", altDark: reactBlack, delay: 1 },
-    { icon: bs, alt: "", altDark: bsBlack, delay: 1.5 },
-    { icon: tailwind, alt: "", altDark: tailwindBlack, delay: 2 },
-    { icon: github, alt: "", altDark: githubBlack, delay: 2.5 },
-    { icon: figma, alt: "", altDark: figmaBlack, delay: 3 },
+    { icon: html, alt: "HTML", altDark: htmlBlack, delay: 0 },
+    { icon: js, alt: "JavaScript", altDark: jsBlack, delay: 0.5 },
+    { icon: react, alt: "ReactJS", altDark: reactBlack, delay: 1 },
+    { icon: bs, alt: "Bootstrap", altDark: bsBlack, delay: 1.5 },
+    { icon: tailwind, alt: "TailwindCSS", altDark: tailwindBlack, delay: 2 },
+    { icon: github, alt: "Github", altDark: githubBlack, delay: 2.5 },
+    { icon: figma, alt: "Figma", altDark: figmaBlack, delay: 3 },
   ];
 
   const getAnimationIconConfig = () => ({
@@ -55,6 +55,7 @@ const SkillsList = () => {
                 ...iconAnimationConfig.transition,
                 delay: skill.delay,
               }}
+              title={skill.alt}
               viewport={iconAnimationConfig.viewport}
               className="flex mx-auto h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md relative"
             >
