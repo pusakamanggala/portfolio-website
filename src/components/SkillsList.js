@@ -41,11 +41,11 @@ const SkillsList = () => {
 
   return (
     <div className={`${dark && "dark"}`}>
-      <div className="pt-40 bg-teal-500 dark:bg-slate-900 transition-all duration-700 ">
-        <h1 className="text-2xl mt-14 text-center md:text-4xl text-slate-900  mb-0 dark:text-white">
+      <div className="pt-64 bg-teal-500 dark:bg-slate-900 transition-all duration-700 ">
+        <h1 className="text-2xl text-center md:text-4xl text-slate-900  mb-0 dark:text-white">
           Skills and Tools
         </h1>
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-8 md:px-4 px-16 md:w-full lg:w-6/12 mx-auto py-36">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-8 md:px-4 px-16 md:w-full lg:w-6/12 mx-auto py-20 ">
           {skills.map((skill, index) => (
             <motion.a
               key={index}

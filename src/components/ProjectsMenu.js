@@ -9,7 +9,7 @@ const ProjectsMenu = () => {
 
   return (
     <div className={`${dark && "dark"}`}>
-      <div className="md:pt-24 pt-16 bg-teal-500 dark:bg-slate-900 transition-all duration-700">
+      <div className="md:pt-40 pt-16 bg-teal-500 dark:bg-slate-900 transition-all duration-700">
         <h1 className="text-2xl text-center md:text-4xl text-slate-900  mb-0 dark:text-white">
           Projects
         </h1>
