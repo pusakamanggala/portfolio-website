@@ -10,11 +10,11 @@ const ProjectsMenu = () => {
   return (
     <div className={`${dark && "dark"}`}>
       <div className="md:pt-24 pt-16 bg-teal-500 dark:bg-slate-900 transition-all duration-700">
-        <h1 className="text-2xl md:text-4xl text-slate-900 font-poppins mb-0 dark:text-white">
+        <h1 className="text-2xl text-center md:text-4xl text-slate-900  mb-0 dark:text-white">
           Projects
         </h1>
         <div className="flex pt-20 justify-center">
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:max-w-4xl w-full">
+          <div className="grid text-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:max-w-4xl w-full">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

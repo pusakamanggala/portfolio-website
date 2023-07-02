@@ -24,7 +24,7 @@ const HomePage = () => {
   }, [mobileTimeoutAddition]);
 
   return (
-    <div className={` ${dark ? "dark" : ""} App relative bg-teal-500"`}>
+    <div className={` ${dark ? "dark" : ""} relative `}>
       {showNavBar && <Navbar />}
       <section id="HeroSection">
         <HeroSections />

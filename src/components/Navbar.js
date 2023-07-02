@@ -23,7 +23,7 @@ export default function NavBar() {
       <div className="justify-between px-4 mx-auto lg:max-w-10xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <h1 className="text-3xl text-slate-900 font-poppins dark:text-teal-300">
+            <h1 className="text-3xl text-slate-900  dark:text-teal-300">
               Pusaka.
             </h1>
 
@@ -71,14 +71,14 @@ export default function NavBar() {
               navbar ? "block" : "hidden"
             }`}
           >
-            <ul className="justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <ul className="justify-center text-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li>
                 <Link
                   activeClass="text-black dark:text-teal-300"
                   smooth={true}
                   spy={true}
                   to="HeroSection"
-                  className="text-2xl font-poppins text-white cursor-pointer hover:text-3xl "
+                  className="text-2xl  text-white cursor-pointer hover:text-3xl "
                 >
                   Home
                 </Link>
@@ -89,7 +89,7 @@ export default function NavBar() {
                   smooth={true}
                   spy={true}
                   to="Project"
-                  className="text-2xl font-poppins text-white cursor-pointer hover:text-3xl"
+                  className="text-2xl  text-white cursor-pointer hover:text-3xl"
                 >
                   Projects
                 </Link>
@@ -100,7 +100,7 @@ export default function NavBar() {
                   smooth={true}
                   spy={true}
                   to="Skills"
-                  className="text-2xl font-poppins text-white cursor-pointer hover:text-3xl"
+                  className="text-2xl  text-white cursor-pointer hover:text-3xl"
                 >
                   Skills
                 </Link>
@@ -110,7 +110,7 @@ export default function NavBar() {
                   href={Resume}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-2xl font-poppins text-white hover:text-3xl"
+                  className="text-2xl  text-white hover:text-3xl"
                 >
                   Resume
                 </a>

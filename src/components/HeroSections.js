@@ -58,10 +58,10 @@ const HeroSections = () => {
 
   return (
     <div className={`flex justify-center items-center ${dark && "dark"}`}>
-      <div className="w-full h-screen flex justify-center items-center bg-teal-500 dark:bg-slate-900 transition-all duration-700">
-        <div className="flex-row justify-center items-center w-full p-5 md:p-0">
-          <div className="typewriter transition-opacity duration-500">
-            <h1 className="text-xl md:text-4xl text-white font-poppins max-w-fit pb-1">
+      <div className="w-full h-screen flex justify-center items-center bg-teal-500 dark:bg-slate-900 transition-colors duration-700">
+        <div className="flex-row justify-center items-center w-full p-5 text-center md:p-0">
+          <div className="typewriter transition-opacity duration-500 t">
+            <h1 className="text-xl md:text-4xl text-white  max-w-fit pb-1">
               Hi, I'm{" "}
               <span className="text-slate-900 dark:text-teal-300">
                 Pusaka Manggala
@@ -74,7 +74,7 @@ const HeroSections = () => {
               initial={animationConfig.initial}
               animate={animationConfig.animate}
               transition={animationConfig.transition}
-              className="text-xl md:text-4xl text-white font-poppins transition-opacity duration-500 mb-4"
+              className="text-xl  md:text-4xl text-white  transition-opacity duration-500 mb-4"
             >
               A Front End Web Developer
             </motion.h2>
@@ -84,10 +84,10 @@ const HeroSections = () => {
               initial={animationConfig.initial}
               animate={animationConfig.animate}
               transition={animationConfig.transition}
-              className="md:text-xl text-xs font-poppins text-white mx-auto lg:w-2/4"
+              className="md:text-xl text-xs  text-white mx-auto lg:w-2/4"
             >
               I'm a front-end web developer from Indonesia, love to build a
-              beautiful and fun website using React.Js and CSS framework like
+              beautiful and fun website using ReactJS and CSS framework like
               Bootstrap and Tailwind.
             </motion.h1>
           )}
