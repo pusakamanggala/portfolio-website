@@ -13,7 +13,7 @@ const ProjectsMenu = () => {
         <h1 className="text-2xl md:text-4xl text-slate-900 font-poppins mb-0 dark:text-white">
           Projects
         </h1>
-        <div className="flex py-20 justify-center">
+        <div className="flex pt-20 justify-center">
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:max-w-4xl w-full">
             <motion.div
               initial={{ opacity: 0 }}
