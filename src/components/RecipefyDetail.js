@@ -7,7 +7,6 @@ import tailwind from "../icons/tailwind.png";
 import tailwindBlack from "../icons/tailwindBlack.png";
 import js from "../icons/js.png";
 import jsBlack from "../icons/jsBlack.png";
-import flowbite from "../icons/flowbite.png";
 import HeroSection from "../img/Projects/Recipefy/HeroSection.png";
 import SearchPage from "../img/Projects/Recipefy/SearchPage.png";
 import RecipeDetail from "../img/Projects/Recipefy/RecipeDetail.png";
