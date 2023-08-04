@@ -9,6 +9,7 @@ import WorkSpotDetail from "./WorkSpotDetail";
 import IsItRainDetail from "./IsItRainDetail";
 import Recipefy from "../img/Recipefy.jpg";
 import SurveyWebsite from "../img/SurveyWebsite.jpg";
+import RecipefyDetail from "./RecipefyDetail";
 
 const ProjectsMenu = () => {
   const { dark } = React.useContext(ThemeContext);
@@ -29,6 +30,8 @@ const ProjectsMenu = () => {
         return <WorkSpotDetail isOpen={isOpen} setIsOpen={setIsOpen} />;
       case "IsItRain":
         return <IsItRainDetail isOpen={isOpen} setIsOpen={setIsOpen} />;
+      case "Recipefy":
+        return <RecipefyDetail isOpen={isOpen} setIsOpen={setIsOpen} />;
       // Render other project components based on selectedProject value
       default:
         return null;
@@ -106,6 +109,7 @@ const ProjectsMenu = () => {
                 className="border-4 dark:border-teal-300 border-slate-900 overflow-clip rounded-2xl"
                 src={Recipefy}
                 alt=""
+                onClick={() => selectProject("Recipefy")}
               />
               <h1 className="w-full bg-slate-900  dark:bg-teal-300 absolute bottom-0 p-3 text-white font-semibold dark:text-slate-900 dark:shadow-teal-400">
                 Recipefy <br /> Cooking Recipe Website
