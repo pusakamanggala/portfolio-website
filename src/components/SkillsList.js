@@ -78,7 +78,6 @@ const SkillsList = () => {
       delay: 3.5,
       link: "https://www.figma.com/",
     },
-    ,
   ];
 
   const getAnimationIconConfig = () => ({
