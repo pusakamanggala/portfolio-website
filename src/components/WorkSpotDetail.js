@@ -86,7 +86,7 @@ const WorkSpotDetail = ({ isOpen, setIsOpen }) => {
             </div>{" "}
             {/* Project Title */}
             <div className="">
-              <h1 className="text-left text-xl">
+              <h1 className="text-left text-xl w-3/4">
                 <span className="dark:text-teal-300">Workspot</span> | Job
                 Requirements Website
               </h1>

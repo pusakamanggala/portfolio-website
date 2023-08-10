@@ -78,7 +78,7 @@ const TwoFourGameDetail = ({ isOpen, setIsOpen }) => {
               </button>
             </div>
             <div className="">
-              <h1 className="text-left text-xl">
+              <h1 className="text-left text-xl w-3/4">
                 <span className="dark:text-teal-300">24 Game</span> | Mobile
                 Game App
               </h1>

@@ -77,7 +77,7 @@ const IsItRainDetail = ({ isOpen, setIsOpen }) => {
               </button>
             </div>
             <div className="">
-              <h1 className="text-left text-xl">
+              <h1 className="text-left text-xl w-3/4">
                 <span className="dark:text-teal-300">Is-it-rain</span> | Weather
                 Forecast Website
               </h1>

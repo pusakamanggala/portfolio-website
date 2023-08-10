@@ -85,7 +85,7 @@ const SatisfactionSurveyWebsiteDetail = ({ isOpen, setIsOpen }) => {
             </div>
             {/* Project Title */}
             <div className="">
-              <h1 className="text-left text-xl">
+              <h1 className="text-left text-xl w-3/4">
                 <span className="dark:text-teal-300">
                   Satisfaction Survey Website
                 </span>
