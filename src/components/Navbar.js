@@ -17,7 +17,7 @@ export default function NavBar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`w-full ${
-        navbar ? "h-screen md:h-auto" : ""
+        navbar ? "h-dvh md:h-auto" : ""
       }  backdrop-blur-sm bg-teal/5 fixed z-10 ${dark && "dark"}`}
     >
       <div className="justify-between px-4 mx-auto lg:max-w-10xl md:items-center md:flex md:px-8">
