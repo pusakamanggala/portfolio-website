@@ -16,18 +16,69 @@ import figmaBlack from "../icons/figmaBlack.png";
 import tailwindBlack from "../icons/tailwindBlack.png";
 import bsBlack from "../icons/bsBlack.png";
 import footerImg from "../img/footerImg.png";
+import reactQuery from "../icons/reactQuery.png";
 
 const SkillsList = () => {
   const { dark } = useContext(ThemeContext);
 
   const skills = [
-    { icon: html, alt: "HTML", altDark: htmlBlack, delay: 0 },
-    { icon: js, alt: "JavaScript", altDark: jsBlack, delay: 0.5 },
-    { icon: react, alt: "ReactJS", altDark: reactBlack, delay: 1 },
-    { icon: bs, alt: "Bootstrap", altDark: bsBlack, delay: 1.5 },
-    { icon: tailwind, alt: "TailwindCSS", altDark: tailwindBlack, delay: 2 },
-    { icon: github, alt: "Github", altDark: githubBlack, delay: 2.5 },
-    { icon: figma, alt: "Figma", altDark: figmaBlack, delay: 3 },
+    {
+      icon: html,
+      alt: "HTML",
+      altDark: htmlBlack,
+      delay: 0,
+      link: "https://www.w3schools.com/html/",
+    },
+    {
+      icon: js,
+      alt: "JavaScript",
+      altDark: jsBlack,
+      delay: 0.5,
+      link: "https://www.javascript.com/",
+    },
+    {
+      icon: react,
+      alt: "ReactJS",
+      altDark: reactBlack,
+      delay: 1,
+      link: "https://legacy.reactjs.org/docs/getting-started.html",
+    },
+    {
+      icon: reactQuery,
+      alt: "React Query",
+      altDark: reactQuery,
+      delay: 1.5,
+      link: "https://legacy.reactjs.org/docs/getting-started.html",
+    },
+    {
+      icon: bs,
+      alt: "Bootstrap",
+      altDark: bsBlack,
+      delay: 2,
+      link: "https://getbootstrap.com/",
+    },
+    {
+      icon: tailwind,
+      alt: "TailwindCSS",
+      altDark: tailwindBlack,
+      delay: 2.5,
+      link: "https://tailwindcss.com/",
+    },
+    {
+      icon: github,
+      alt: "Github",
+      altDark: githubBlack,
+      delay: 3,
+      link: "https://github.com/",
+    },
+    {
+      icon: figma,
+      alt: "Figma",
+      altDark: figmaBlack,
+      delay: 3.5,
+      link: "https://www.figma.com/",
+    },
+    ,
   ];
 
   const getAnimationIconConfig = () => ({
@@ -45,9 +96,11 @@ const SkillsList = () => {
         <h1 className="text-2xl text-center md:text-4xl text-slate-900  mb-0 dark:text-white">
           Skills and Tools
         </h1>
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-8 md:px-4 px-16 md:w-full lg:w-6/12 mx-auto py-20 ">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-8 md:px-4 px-16 md:w-full lg:w-6/12 mx-auto py-20 ">
           {skills.map((skill, index) => (
             <motion.a
+              href={skill.link}
+              target="_blank"
               key={index}
               initial={iconAnimationConfig.initial}
               whileInView={iconAnimationConfig.whileInView}
