@@ -2,9 +2,14 @@ module.exports = {
   darkMode: ["class"],
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      // Add custom class for height svh
+      height: {
+        dvh: "100dvh", // Set the height to 100 viewport height
+      },
+    },
     fontFamily: {
-      sans: ["Poppins", "sans-serif"], // Set Poppins as the default sans-serif font
+      sans: ["Poppins", "sans-serif"],
     },
   },
   plugins: [],

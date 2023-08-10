@@ -65,7 +65,7 @@ const SatisfactionSurveyWebsiteDetail = ({ isOpen, setIsOpen }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 flex items-center justify-center z-50 h-screen w-screen bg-black/25 backdrop-blur-sm bg-opacity-30 text-slate-900 dark:text-white"
+          className="fixed inset-0 flex items-center justify-center z-50 h-dvh w-screen bg-black/25 backdrop-blur-sm bg-opacity-30 text-slate-900 dark:text-white"
           initial="hidden"
           animate="visible"
           exit="exit"
@@ -76,7 +76,10 @@ const SatisfactionSurveyWebsiteDetail = ({ isOpen, setIsOpen }) => {
             variants={modalVariants}
           >
             <div className="bg-black flex justify-end">
-              <button className="fixed" onClick={handleClose}>
+              <button
+                className="fixed dark:bg-teal-300 bg-slate-900 w-6 rounded-full z-50 text-white dark:text-black"
+                onClick={handleClose}
+              >
                 X
               </button>
             </div>
