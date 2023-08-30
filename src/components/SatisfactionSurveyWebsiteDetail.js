@@ -9,9 +9,9 @@ import js from "../icons/js.png";
 import jsBlack from "../icons/jsBlack.png";
 import chartJs from "../icons/chartjs.png";
 import reactQuery from "../icons/reactQuery.png";
-import HomePageImg from "../img/Projects/SatisfactionSurveyWebsite/HomePage.png";
-import SurveyResultImg from "../img/Projects/SatisfactionSurveyWebsite/SurveyResultPage.png";
-import LoginPageImg from "../img/Projects/SatisfactionSurveyWebsite/LoginPage.png";
+import HomePageImg from "../img/Projects/SatisfactionSurveyWebsite/HomePage.webp";
+import SurveyResultImg from "../img/Projects/SatisfactionSurveyWebsite/SurveyResultPage.webp";
+import LoginPageImg from "../img/Projects/SatisfactionSurveyWebsite/LoginPage.webp";
 
 const SatisfactionSurveyWebsiteDetail = ({ isOpen, setIsOpen }) => {
   const { dark } = useContext(ThemeContext);

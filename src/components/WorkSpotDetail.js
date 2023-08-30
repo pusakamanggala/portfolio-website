@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import HeroSectionImg from "../img/Projects/Workspost/HeroSection.png";
-import DashboardImg from "../img/Projects/Workspost/Dashboard.png";
-import VacationsSectionImg from "../img/Projects/Workspost/VacationsSection.png";
+import HeroSectionImg from "../img/Projects/Workspost/HeroSection.webp";
+import DashboardImg from "../img/Projects/Workspost/Dashboard.webp";
+import VacationsSectionImg from "../img/Projects/Workspost/VacationsSection.webp";
 import react from "../icons/react.png";
 import reactBlack from "../icons/reactBlack.png";
 import { ThemeContext } from "../context/ThemeContext";

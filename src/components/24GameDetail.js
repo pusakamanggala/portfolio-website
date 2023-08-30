@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import FlashScreenImg from "../img/Projects/24Game/FlashScreen.png";
-import GameplayImg from "../img/Projects/24Game/Gameplay.png";
-import HomeImg from "../img/Projects/24Game/Home.png";
+import FlashScreenImg from "../img/Projects/24Game/FlashScreen.webp";
+import GameplayImg from "../img/Projects/24Game/Gameplay.webp";
+import HomeImg from "../img/Projects/24Game/Home.webp";
 import react from "../icons/react.png";
 import reactBlack from "../icons/reactBlack.png";
 import { ThemeContext } from "../context/ThemeContext";

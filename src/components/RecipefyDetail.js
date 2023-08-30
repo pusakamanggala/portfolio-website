@@ -7,9 +7,9 @@ import tailwind from "../icons/tailwind.png";
 import tailwindBlack from "../icons/tailwindBlack.png";
 import js from "../icons/js.png";
 import jsBlack from "../icons/jsBlack.png";
-import HeroSection from "../img/Projects/Recipefy/HeroSection.png";
-import SearchPage from "../img/Projects/Recipefy/SearchPage.png";
-import RecipeDetail from "../img/Projects/Recipefy/RecipeDetail.png";
+import HeroSection from "../img/Projects/Recipefy/HeroSection.webp";
+import SearchPage from "../img/Projects/Recipefy/SearchPage.webp";
+import RecipeDetail from "../img/Projects/Recipefy/RecipeDetail.webp";
 import reactQuery from "../icons/reactQuery.png";
 
 const RecipefyDetail = ({ isOpen, setIsOpen }) => {
