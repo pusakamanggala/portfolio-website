@@ -48,7 +48,7 @@ const SkillsList = () => {
       alt: "React Query",
       altDark: reactQuery,
       delay: 1.5,
-      link: "https://legacy.reactjs.org/docs/getting-started.html",
+      link: "https://tanstack.com/query/v3",
     },
     {
       icon: bs,
