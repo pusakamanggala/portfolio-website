@@ -95,7 +95,7 @@ const SkillsList = () => {
         <h1 className="text-2xl text-center md:text-4xl text-slate-900  mb-0 dark:text-white">
           Skills and Tools
         </h1>
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-8 md:px-4 px-16 md:w-full lg:w-6/12 mx-auto py-20 ">
+        <div className="flex flex-row py-20 justify-center flex-wrap">
           {skills.map((skill, index) => (
             <motion.a
               href={skill.link}
@@ -109,10 +109,10 @@ const SkillsList = () => {
               }}
               title={skill.alt}
               viewport={iconAnimationConfig.viewport}
-              className="flex mx-auto h-20 w-20 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md relative"
+              className="flex h-14 w-14 md:h-20 md:w-20 m-5 rounded-full bg-slate-900 dark:bg-white justify-center items-center dark:shadow-teal-400 shadow-teal-900 shadow-md relative"
             >
               <img
-                className="h-10"
+                className="md:h-10 h-8"
                 src={dark ? skill.altDark : skill.icon}
                 alt={skill.alt}
               />
