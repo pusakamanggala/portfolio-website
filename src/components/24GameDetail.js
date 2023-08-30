@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import FlashScreenImg from "../img/Projects/24Game/FlashScreen.webp";
 import GameplayImg from "../img/Projects/24Game/Gameplay.webp";
@@ -14,6 +14,11 @@ import axiosBlack from "../icons/axiosBlack.png";
 
 const TwoFourGameDetail = ({ isOpen, setIsOpen }) => {
   const { dark } = useContext(ThemeContext);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
 
   const backdropVariants = {
     hidden: { opacity: 0 },
@@ -90,32 +95,39 @@ const TwoFourGameDetail = ({ isOpen, setIsOpen }) => {
                   className="w-32 rounded-md mx-auto"
                   src={HomeImg}
                   alt=""
+                  onLoad={handleImageLoad}
                   variants={{
                     hidden: { x: "-500%", opacity: 0 },
                     visible: { x: 0, opacity: 1 },
                   }}
-                  initial="hidden"
-                  animate="visible"
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                   transition={{ ease: "easeOut", duration: 0.5 }}
                 />
                 <motion.img
                   className="w-40 rounded-md mx-auto"
                   src={FlashScreenImg}
                   alt=""
-                  initial={{ scale: 0.5 }}
-                  animate={{ scale: 1 }}
+                  onLoad={handleImageLoad}
+                  variants={{
+                    hidden: { scale: 0.5, opacity: 0 },
+                    visible: { scale: 1, opacity: 1 },
+                  }}
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                   transition={{ ease: "easeOut", duration: 0.5, delay: 0 }}
                 />
                 <motion.img
                   className="w-32 rounded-md mx-auto"
                   src={GameplayImg}
                   alt=""
+                  onLoad={handleImageLoad}
                   variants={{
                     hidden: { x: "500%", opacity: 0 },
                     visible: { x: 0, opacity: 1 },
                   }}
-                  initial="hidden"
-                  animate="visible"
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                   transition={{ ease: "easeOut", duration: 0.5 }}
                 />
               </div>

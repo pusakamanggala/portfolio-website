@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import react from "../icons/react.png";
 import reactBlack from "../icons/reactBlack.png";
@@ -13,6 +13,11 @@ import reactQuery from "../icons/reactQuery.png";
 
 const IsItRainDetail = ({ isOpen, setIsOpen }) => {
   const { dark } = useContext(ThemeContext);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
 
   const backdropVariants = {
     hidden: { opacity: 0 },
@@ -89,32 +94,39 @@ const IsItRainDetail = ({ isOpen, setIsOpen }) => {
                   className="md:w-56 w-36 rounded-xl mx-auto shadow-md dark:shadow-teal-300"
                   src={Toronto}
                   alt=""
+                  onLoad={handleImageLoad}
                   variants={{
                     hidden: { x: "-500%", opacity: 0 },
                     visible: { x: 0, opacity: 1 },
                   }}
-                  initial="hidden"
-                  animate="visible"
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                   transition={{ ease: "easeOut", duration: 0.5 }}
                 />
                 <motion.img
                   className="md:w-72 w-36 rounded-xl mx-auto shadow-md dark:shadow-teal-300"
                   src={Tokyo}
                   alt=""
-                  initial={{ scale: 0.5 }}
-                  animate={{ scale: 1 }}
+                  onLoad={handleImageLoad}
+                  variants={{
+                    hidden: { scale: 0.5, opacity: 0 },
+                    visible: { scale: 1, opacity: 1 },
+                  }}
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                   transition={{ ease: "easeOut", duration: 0.5, delay: 0 }}
                 />
                 <motion.img
                   className="md:w-56 w-36 rounded-xl mx-auto shadow-md dark:shadow-teal-300"
                   src={Jakarta}
                   alt=""
+                  onLoad={handleImageLoad}
                   variants={{
                     hidden: { x: "500%", opacity: 0 },
                     visible: { x: 0, opacity: 1 },
                   }}
-                  initial="hidden"
-                  animate="visible"
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                   transition={{ ease: "easeOut", duration: 0.5 }}
                 />
               </div>

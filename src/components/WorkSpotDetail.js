@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import HeroSectionImg from "../img/Projects/Workspost/HeroSection.webp";
 import DashboardImg from "../img/Projects/Workspost/Dashboard.webp";
@@ -16,6 +16,11 @@ import flowbite from "../icons/flowbite.png";
 
 const WorkSpotDetail = ({ isOpen, setIsOpen }) => {
   const { dark } = useContext(ThemeContext);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
 
   const backdropVariants = {
     hidden: { opacity: 0 },
@@ -98,30 +103,40 @@ const WorkSpotDetail = ({ isOpen, setIsOpen }) => {
                   className="w-96 rounded-md"
                   src={VacationsSectionImg}
                   alt=""
+                  onLoad={handleImageLoad}
                   variants={{
                     hidden: { x: "-500%", opacity: 0 },
                     visible: { x: 0, opacity: 1 },
                   }}
-                  initial="hidden"
-                  animate="visible"
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                   transition={{ ease: "easeOut", duration: 0.5 }}
                 />
                 <motion.img
                   className="w-96 rounded-md"
                   src={DashboardImg}
                   alt=""
+                  onLoad={handleImageLoad}
                   variants={{
                     hidden: { x: "500%", opacity: 0 },
                     visible: { x: 0, opacity: 1 },
                   }}
-                  initial="hidden"
-                  animate="visible"
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                   transition={{ ease: "easeOut", duration: 0.5 }}
                 />
-                <img
+                <motion.img
                   className="absolute w-2/3 left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-md shadow-black shadow-sm"
                   src={HeroSectionImg}
                   alt=""
+                  onLoad={handleImageLoad}
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1 },
+                  }}
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
+                  transition={{ ease: "easeOut", duration: 0.5, delay: 0 }}
                 />
               </div>
             </div>

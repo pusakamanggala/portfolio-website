@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import react from "../icons/react.png";
 import reactBlack from "../icons/reactBlack.png";
@@ -14,6 +14,11 @@ import reactQuery from "../icons/reactQuery.png";
 
 const RecipefyDetail = ({ isOpen, setIsOpen }) => {
   const { dark } = useContext(ThemeContext);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
 
   const backdropVariants = {
     hidden: { opacity: 0 },
@@ -96,30 +101,39 @@ const RecipefyDetail = ({ isOpen, setIsOpen }) => {
                   className="w-96 rounded-md"
                   src={RecipeDetail}
                   alt=""
+                  onLoad={handleImageLoad}
                   variants={{
                     hidden: { x: "-500%", opacity: 0 },
                     visible: { x: 0, opacity: 1 },
                   }}
-                  initial="hidden"
-                  animate="visible"
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                   transition={{ ease: "easeOut", duration: 0.5 }}
                 />
                 <motion.img
                   className="w-96 rounded-md"
                   src={SearchPage}
                   alt=""
+                  onLoad={handleImageLoad}
                   variants={{
                     hidden: { x: "500%", opacity: 0 },
                     visible: { x: 0, opacity: 1 },
                   }}
-                  initial="hidden"
-                  animate="visible"
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                   transition={{ ease: "easeOut", duration: 0.5 }}
                 />
-                <img
+                <motion.img
                   className="absolute w-2/3 left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-md shadow-black shadow-sm"
                   src={HeroSection}
                   alt=""
+                  onLoad={handleImageLoad}
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1 },
+                  }}
+                  initial={isImageLoaded ? "visible" : "hidden"}
+                  animate={isImageLoaded ? "visible" : "hidden"}
                 />
               </div>
             </div>
