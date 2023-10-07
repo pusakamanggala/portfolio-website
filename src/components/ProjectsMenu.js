@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TwoForGame from "../img/24Game.jpg";
 import Workspot from "../img/Workspot.jpg";
 import WeatherApp from "../img/WeatherApp.png";
+import Echo from "../img/Echo.webp";
 import { ThemeContext } from "../context/ThemeContext";
 import { motion } from "framer-motion";
 import TwoFourGameDetail from "./24GameDetail";
@@ -11,6 +12,7 @@ import Recipefy from "../img/Recipefy.jpg";
 import SurveyWebsite from "../img/SurveyWebsite.jpg";
 import RecipefyDetail from "./RecipefyDetail";
 import SatisfactionSurveyWebsiteDetail from "./SatisfactionSurveyWebsiteDetail";
+import EchoDetail from "./EchoDetail";
 
 const ProjectsMenu = () => {
   const { dark } = React.useContext(ThemeContext);
@@ -40,6 +42,8 @@ const ProjectsMenu = () => {
             setIsOpen={setIsOpen}
           />
         );
+      case "Echo":
+        return <EchoDetail isOpen={isOpen} setIsOpen={setIsOpen} />;
       // Render other project components based on selectedProject value
       default:
         return null;
@@ -139,6 +143,24 @@ const ProjectsMenu = () => {
               <h1 className="w-full bg-slate-900  dark:bg-teal-300 absolute bottom-0 p-3 text-white font-semibold dark:text-slate-900 dark:shadow-teal-400">
                 Satisfaction Survey Website <br />
                 Case Study of UIN Malang
+              </h1>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 2.5 }}
+              className="w-72 h-96 bg-white rounded-2xl mx-auto relative overflow-hidden shadow-md shadow-teal-900 hover:scale-105 transition-transform duration-300  cursor-pointer"
+            >
+              <img
+                className="border-4 dark:border-teal-300 border-slate-900 overflow-clip rounded-2xl"
+                src={Echo}
+                alt=""
+                onClick={() => selectProject("Echo")}
+              />
+              <h1 className="w-full bg-slate-900  dark:bg-teal-300 absolute bottom-0 p-3 text-white font-semibold dark:text-slate-900 dark:shadow-teal-400">
+                Echo <br />
+                Spotify App Clone
               </h1>
             </motion.div>
           </div>
