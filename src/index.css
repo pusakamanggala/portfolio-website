@@ -26,3 +26,8 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* index.css */
+.slick-dots li button:before {
+  color: #fff !important;
+}
